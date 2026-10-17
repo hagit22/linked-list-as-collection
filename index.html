@@ -707,6 +707,84 @@ a:hover { color: var(--color-accent-600); }
 .dg-objbox .dg-row { height: 28px; font-size: 16px; padding: 0 12px; }
 .solo-card .gx-code .cm { font-size: 0.8em; color: var(--color-neutral-600); }
 .app-grid-5 .app-text { font-size: 24px; }
+
+.rm { direction: rtl; display: grid; grid-template-columns: minmax(0,1fr) 90px minmax(0,1fr) 90px minmax(0,1fr); align-items: start; width: 100%; max-width: 1632px; align-self: center; margin-top: 72px; }
+.rm-stage { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+.rm-visual { height: 340px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.rm-arrow { height: 340px; display: flex; align-items: center; justify-content: center; color: var(--color-neutral-500); }
+.rm-visual.stack { flex-direction: column; gap: 6px; }
+.rm-visual.stack .rm-win { width: 260px; }
+.rm-visual.stack .rm-body { gap: 10px; padding: 14px 16px 16px; }
+.rm-visual.stack .rm-swap svg { transform: rotate(90deg); }
+.rm-arrow svg, .rm-swap svg { display: block; }
+.rm-swap { color: var(--color-accent); }
+.rm-win { direction: ltr; width: 180px; background: var(--color-neutral-900); border-radius: 16px; box-shadow: var(--shadow-md); overflow: hidden; }
+.rm-win.wide { width: 330px; }
+.rm-bar { display: flex; gap: 6px; align-items: flex-end; height: 38px; padding: 0 10px; background: color-mix(in srgb, var(--color-neutral-900) 75%, black); }
+.rm-tab { padding: 5px 12px; border-radius: 8px 8px 0 0; background: var(--color-neutral-900); color: var(--color-neutral-100); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 17px; }
+.rm-body { display: flex; flex-direction: column; gap: 12px; padding: 20px 18px 24px; }
+.rm-ln { display: block; height: 12px; border-radius: 6px; background: var(--color-neutral-600); }
+.rm-ln.new { background: var(--color-accent-2-500); }
+.rm-dup { display: flex; flex-direction: column; gap: 12px; padding: 8px; margin: 0 -8px; border-radius: 10px; outline: 3px dashed var(--color-accent-300); }
+.rm-winwrap { position: relative; }
+.rm-q { position: absolute; top: -28px; left: -28px; width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--color-accent); color: var(--color-bg); font-family: var(--font-heading); font-size: 46px; box-shadow: var(--shadow-md); }
+.rm-text { margin: 0; font-size: 26px; line-height: 1.45; max-width: 440px; text-wrap: pretty; }
+.rm + .app-bonus { margin-top: 72px; }
+.rm-note { align-self: center; display: flex; align-items: center; gap: 18px; margin: 60px 0 0; padding: 18px 40px; border-radius: 999px; background: var(--color-accent-2-200); color: var(--color-accent-2-800); font-size: 30px; font-weight: 600; }
+.rm-note svg { flex: none; display: block; }
+.rm-note.call { margin-top: 56px; background: var(--color-accent-100); color: var(--color-accent-700); }
+.pair .pair-tag.he { font-family: var(--font-body); }
+.app-ex.he { direction: rtl; text-align: right; font-family: var(--font-body); }
+
+.mg { direction: rtl; display: grid; grid-template-columns: 700px minmax(0,1fr); gap: 64px; align-items: center; width: 100%; max-width: 1632px; align-self: center; margin-top: 16px; }
+.mg-steps { display: flex; flex-direction: column; gap: 8px; }
+.mg-step { display: grid; grid-template-columns: 48px minmax(0,1fr); column-gap: 18px; align-items: start; padding: 12px 18px; border-radius: 20px; transition: background 0.3s; }
+.mg-step.on { background: var(--color-accent-100); }
+.mg-step .app-num { width: 48px; height: 48px; font-size: 24px; }
+.mg-step-title { margin: 0; font-size: 30px; font-weight: 700; line-height: 48px; }
+.mg-step-text { margin: 2px 0 0; font-size: 24px; line-height: 1.4; text-wrap: pretty; }
+.mg-step-text code { direction: ltr; unicode-bidi: isolate; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; background: var(--color-neutral-200); padding: 1px 8px; border-radius: 6px; }
+.mg-diagram { direction: ltr; display: flex; align-items: center; justify-content: center; gap: 16px; }
+.mg-col { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.mg-label { direction: rtl; font-size: 24px; font-weight: 700; color: var(--color-accent-2-700); }
+.mg-col .rm-win { width: 360px; transition: outline-color 0.3s; outline: 4px solid transparent; outline-offset: 4px; }
+.mg-col .rm-win.changed { outline-color: var(--color-accent); }
+.mg-tree { display: flex; flex-direction: column; gap: 4px; padding: 12px; }
+.mg-file { display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 20px; color: var(--color-neutral-100); transition: background 0.3s, opacity 0.3s; }
+.mg-file::before { content: ""; flex: none; width: 12px; height: 15px; border: 2px solid currentColor; border-radius: 3px; opacity: 0.6; }
+.mg-file.new { color: var(--color-accent-2-200); }
+.mg-file.changed { background: color-mix(in srgb, var(--color-accent-2-500) 40%, transparent); }
+.mg-file.gone.changed { background: none; opacity: 0.35; text-decoration: line-through; }
+.mg-badge { margin-left: auto; padding: 2px 12px; border-radius: 999px; background: var(--color-accent-2-200); color: var(--color-accent-2-800); font-family: var(--font-body); font-size: 16px; font-weight: 700; }
+.mg-step { transition: background 0.3s, opacity 0.3s; }
+.mg-step.ptr { opacity: 0.35; }
+.mg-step.changed .app-num { background: var(--color-accent-2-600); }
+.st-lead { margin: 0 0 32px; font-size: 34px; line-height: 1.45; max-width: 1500px; text-wrap: pretty; }
+.st-main { margin-top: 36px !important; align-self: center; width: 100%; max-width: 1728px; }
+
+.st-card { gap: 16px; }
+.st-head { direction: rtl; display: flex; align-items: center; gap: 16px; }
+.st-head .app-num { width: 52px; height: 52px; font-size: 26px; }
+.st-name { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 30px; font-weight: 800; }
+/*.st-card.m1 { background: var(--color-accent-100); }
+.st-card.m1 .st-name { color: var(--color-accent-700); }
+.st-card.m2 { background: color-mix(in srgb, var(--color-accent-2-200) 55%, var(--color-neutral-100)); }*/
+.st-card.m2 .app-num { background: var(--color-accent-2-600); }
+/*.st-card.m2 .st-name { color: var(--color-accent-2-800); }*/
+.st-card .gx-cap { color: var(--color-text); font-weight: 500; }
+.st-main .c1 { color: var(--color-accent-300); font-weight: 700; }
+.st-main .c2 { color: var(--color-accent-2-500); font-weight: 700; }
+
+.gs-cell { display: grid; }
+.gs-cell > * { grid-area: 1 / 1; }
+.gs-t { border-radius: 6px; transition: background 0.3s; }
+.gs-t.changed { background: var(--color-accent-200); }
+.gs-new { color: var(--color-accent-700); font-weight: 700; }
+.gs-notes { display: grid; justify-items: center; margin-top: 40px; }
+.gs-notes > * { grid-area: 1 / 1; margin: 0 !important; }
+
+
+
 </style>
 </head>
 <body>
@@ -715,81 +793,6 @@ a:hover { color: var(--color-accent-600); }
 <section class="slide active cover" data-label="שער">
   <div class="rise"><h1 class="display">שרשרת חוליות כתכונה במחלקה</h1><p class="cover-sub">    </p></div>
   <div class="pin-bottom meta"><span>חגית ידוב</span><span>·</span><span>2026</span></div>
-</section>
-
-<section class="slide content ref-slide tight step-slide" data-steps="1" data-label="מבנה התרגיל">
-  <h2 class="slide-title">מה אנחנו בונים?</h2>
-  <div class="dg-stage">
-    <span class="pair-tag dg-tag" style="left:0;top:0">מחלקת יישום (MusicApp)</span>
-    <span class="pair-tag dg-tag" style="left:380px;top:0">מחלקת אוסף (Playlist)</span>
-    <span class="pair-tag dg-tag" style="left:1400px;top:300px">מחלקה בסיסית (Song)</span>
-
-    <div class="dg-box" style="left:0;top:200px;width:320px;height:240px">
-      <div class="dg-title">MusicApp</div>
-      <span class="dg-field" style="left:12px;top:96px;font-size:18px">playlists</span>
-      <div class="dg-cell" style="left:116px;top:80px;width:64px;height:56px">●</div>
-      <div class="dg-cell" style="left:178px;top:80px;width:64px;height:56px">●</div>
-      <div class="dg-cell" style="left:240px;top:80px;width:64px;height:56px;font-size:16px">null</div>
-      <span class="dg-field" style="left:116px;top:140px;width:64px;text-align:center;font-size:16px;font-weight:400">0</span>
-      <span class="dg-field" style="left:178px;top:140px;width:64px;text-align:center;font-size:16px;font-weight:400">1</span>
-      <span class="dg-field" style="left:240px;top:140px;width:64px;text-align:center;font-size:16px;font-weight:400">2</span>
-      <span class="dg-field" style="left:12px;top:190px">count: 2</span>
-    </div>
-
-    <div class="dg-box" style="left:380px;top:70px;width:280px;height:170px">
-      <div class="dg-title">Playlist</div>
-      <div class="dg-row">playlistName: "Workout"</div>
-      <div class="dg-row">songList ●</div>
-      <div class="dg-row">lastSong ●</div>
-    </div>
-    <div class="dg-node" style="left:760px;top:138px"><span>●</span><span>●</span></div>
-    <div class="dg-node" style="left:960px;top:138px"><span>●</span><span>●</span></div>
-    <div class="dg-node" style="left:1160px;top:138px"><span>●</span><span>null</span></div>
-    <div class="dg-objbox" style="left:760px;top:260px"><div class="dg-title">Song</div><div class="dg-row">Levitating</div><div class="dg-row">pop</div><div class="dg-row">52</div></div>
-    <div class="dg-objbox" style="left:960px;top:260px"><div class="dg-title">Song</div><div class="dg-row">Titanium</div><div class="dg-row">electronic</div><div class="dg-row">18</div></div>
-    <div class="dg-objbox" style="left:1160px;top:260px"><div class="dg-title">Song</div><div class="dg-row">Imagine</div><div class="dg-row">rock</div><div class="dg-row">34</div></div>
-
-    <div class="dg-box" style="left:380px;top:400px;width:280px;height:170px">
-      <div class="dg-title">Playlist</div>
-      <div class="dg-row">playlistName: "Chill"</div>
-      <div class="dg-row">songList ●</div>
-      <div class="dg-row">lastSong ●</div>
-    </div>
-    <div class="dg-node" style="left:760px;top:468px"><span>●</span><span>●</span></div>
-    <div class="dg-node" style="left:960px;top:468px"><span>●</span><span>null</span></div>
-    <div class="dg-objbox" style="left:760px;top:590px"><div class="dg-title">Song</div><div class="dg-row">Yellow</div><div class="dg-row">rock</div><div class="dg-row">27</div></div>
-    <div class="dg-objbox" style="left:960px;top:590px"><div class="dg-title">Song</div><div class="dg-row">Hello</div><div class="dg-row">pop</div><div class="dg-row">40</div></div>
-
-    <div class="dg-call" data-show="1-">
-      <span class="pair-tag">מחלקת יישום</span>
-      <span class="dg-call-arrow">↓ קוראת רק לפעולות של</span>
-      <span class="pair-tag">מחלקת אוסף</span>
-      <span class="dg-call-arrow">↓ קוראת רק לפעולות של</span>
-      <span class="pair-tag">מחלקה בסיסית</span>
-    </div>
-
-    <svg class="mem-arrows" width="1728" height="760" viewBox="0 0 1728 760" aria-hidden="true">
-      <defs><marker id="arrDG" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="14" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" style="fill:var(--color-text)"/></marker></defs>
-      <g style="fill:none;stroke:var(--color-text);stroke-width:3">
-        <path d="M148 308 V252 H350 V155 H378" marker-end="url(#arrDG)"/>
-        <path d="M210 308 V266 H340 V485 H378" marker-end="url(#arrDG)"/>
-        <path d="M660 170 H758" marker-end="url(#arrDG)"/>
-        <path d="M865 170 H958" marker-end="url(#arrDG)"/>
-        <path d="M1065 170 H1158" marker-end="url(#arrDG)"/>
-        <path d="M795 202 V258" marker-end="url(#arrDG)"/>
-        <path d="M995 202 V258" marker-end="url(#arrDG)"/>
-        <path d="M1195 202 V258" marker-end="url(#arrDG)"/>
-        <path d="M600 240 V392 H1370 V170 H1302" marker-end="url(#arrDG)"/>
-        <path d="M660 500 H758" marker-end="url(#arrDG)"/>
-        <path d="M865 500 H958" marker-end="url(#arrDG)"/>
-        <path d="M795 532 V588" marker-end="url(#arrDG)"/>
-        <path d="M995 532 V588" marker-end="url(#arrDG)"/>
-        <path d="M600 570 V722 H1170 V500 H1102" marker-end="url(#arrDG)"/>
-      </g>
-    </svg>
-  </div>
-  <div class="step-dots" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:5"><span data-hl="0-"></span><span data-hl="1-"></span></div>
-  <div class="page-foot" aria-hidden="true"></div>
 </section>
 
 <section class="slide content ref-slide tight" data-label="מחלקות התרגיל">
@@ -985,7 +988,8 @@ a:hover { color: var(--color-accent-600); }
     <div class="solo-sec">
       <span class="pair-tag solo-tag">פעולות</span>
       <div class="grp"><pre class="gx-code">    public Playlist(string playlistName)
-    public string GetPlaylistName()</pre><span class="grp-label">בנאי ופעולה מאחזרת (getter)</span></div>
+    public string GetPlaylistName()
+    public Node<b>&lt;Song&gt;</b> GetSongList()</pre><span class="grp-label">בנאי ופעולות מאחזרות (getters)</span></div>
       <div class="grp"><pre class="gx-code">    public bool AddSong(Song song)  <span class="cm">// false if already exists</span></pre><span class="grp-label">הוספה</span></div>
       <div class="grp"><pre class="gx-code">    public bool PlaySong(string name, int minutes)  <span class="cm">// adds minutes played</span></pre><span class="grp-label">עדכון</span></div>
       <div class="grp"><pre class="gx-code">    public bool RemoveSong(string name)  <span class="cm">// false if not found</span></pre><span class="grp-label">הסרה</span></div>
@@ -1010,9 +1014,10 @@ a:hover { color: var(--color-accent-600); }
     <div class="solo-sec">
       <span class="pair-tag solo-tag">פעולות</span>
       <div class="grp"><pre class="gx-code">    public Kita(string kitaName)
-    public string GetKitaName()</pre><span class="grp-label">בנאי ופעולה מאחזרת (getter)</span></div>
+    public string GetKitaName()
+    public Node<b>&lt;Student&gt;</b> GetStudentList()</pre><span class="grp-label">בנאי ופעולות מאחזרות (getters)</span></div>
       <div class="grp"><pre class="gx-code">    public bool AddStudent(Student student)  <span class="cm">// false if already exists</span></pre><span class="grp-label">הוספה</span></div>
-      <div class="grp"><pre class="gx-code">    public bool TakeExam(string name, int grade)  <span class="cm">// sets the grade</span></pre><span class="grp-label">עדכון</span></div>
+      <div class="grp"><pre class="gx-code">    public bool TakeExam(string name, int grade)  <span class="cm">// updates average grade</span></pre><span class="grp-label">עדכון</span></div>
       <div class="grp"><pre class="gx-code">    public bool RemoveStudent(string name)  <span class="cm">// false if not found</span></pre><span class="grp-label">הסרה</span></div>
       <div class="grp"><pre class="gx-code">    public int CountInMegama(string megama)  <span class="cm">// how many students in megama</span>
     public Node<b>&lt;Student&gt;</b> StudentsInMegama(string megama)  <span class="cm">// new list: students in megama</span>
@@ -1035,7 +1040,8 @@ a:hover { color: var(--color-accent-600); }
     <div class="solo-sec">
       <span class="pair-tag solo-tag">פעולות</span>
       <div class="grp"><pre class="gx-code">    public CarRental(string branchName)
-    public string GetBranchName()</pre><span class="grp-label">בנאי ופעולה מאחזרת (getter)</span></div>
+    public string GetBranchName()
+    public Node<b>&lt;Car&gt;</b> GetCarList()</pre><span class="grp-label">בנאי ופעולות מאחזרות (getters)</span></div>
       <div class="grp"><pre class="gx-code">    public bool AddCar(Car car)  <span class="cm">// false if already exists</span></pre><span class="grp-label">הוספה</span></div>
       <div class="grp"><pre class="gx-code">    public bool RentCar(string licensePlate, int km)  <span class="cm">// adds km</span></pre><span class="grp-label">עדכון</span></div>
       <div class="grp"><pre class="gx-code">    public bool RemoveCar(string licensePlate)  <span class="cm">// false if not found</span></pre><span class="grp-label">הסרה</span></div>
@@ -1060,7 +1066,8 @@ a:hover { color: var(--color-accent-600); }
     <div class="solo-sec">
       <span class="pair-tag solo-tag">פעולות</span>
       <div class="grp"><pre class="gx-code">    public SoccerTeam(string teamName)
-    public string GetTeamName()</pre><span class="grp-label">בנאי ופעולה מאחזרת (getter)</span></div>
+    public string GetTeamName()
+    public Node<b>&lt;Player&gt;</b> GetPlayerList()</pre><span class="grp-label">בנאי ופעולות מאחזרות (getters)</span></div>
       <div class="grp"><pre class="gx-code">    public bool AddPlayer(Player player)  <span class="cm">// false if already exists</span></pre><span class="grp-label">הוספה</span></div>
       <div class="grp"><pre class="gx-code">    public bool AddGoals(string name, int goals)  <span class="cm">// adds goals</span></pre><span class="grp-label">עדכון</span></div>
       <div class="grp"><pre class="gx-code">    public bool RemovePlayer(string name)  <span class="cm">// false if not found</span></pre><span class="grp-label">הסרה</span></div>
@@ -1076,160 +1083,335 @@ a:hover { color: var(--color-accent-600); }
   <div class="page-foot" aria-hidden="true"></div>
 </section>
 
-<section class="slide content ref-slide tight" data-label="התוכנית הראשית">
-  <h2 class="slide-title">בדקו את מחלקת האוסף שיצרתם:</h2>
+<section class="slide content ref-slide tight" data-label="מפת השיעור">
+  <h2 class="slide-title">השלבים הבאים:</h2>
+  <div class="rm">
+    <div class="rm-stage">
+      <div class="rm-visual stack">
+        <div class="rm-win">
+          <div class="rm-bar"><span class="rm-tab">Playlist.cs</span></div>
+          <div class="rm-body">
+            <span class="rm-ln" style="width:70%"></span>
+            <span class="rm-ln" style="width:50%;margin-left:12%"></span>
+            <span class="rm-ln" style="width:20%"></span>
+          </div>
+        </div>
+        <div class="rm-swap">
+          <svg width="70" height="64" viewBox="0 0 70 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M62 20 Q35 2 8 20"/><path d="M16 10 8 20l12 3"/>
+            <path d="M8 44 Q35 62 62 44"/><path d="M54 54l8-10-12-3"/>
+          </svg>
+        </div>
+        <div class="rm-win">
+          <div class="rm-bar"><span class="rm-tab">CarRental.cs</span></div>
+          <div class="rm-body">
+            <span class="rm-ln" style="width:74%"></span>
+            <span class="rm-ln" style="width:44%;margin-left:12%"></span>
+            <span class="rm-ln" style="width:20%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">בודקים את הקוד של בן/בת הזוג</h3></div>
+      <p class="rm-text">כל אחד בודק את הקוד של השני. מצאתם תקלה? הבודק מסביר, הכותב מתקן.</p>
+    </div>
+
+    <div class="rm-arrow"><svg width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 12H6M16 3 6 12l10 9"/></svg></div>
+
+    <div class="rm-stage">
+      <div class="rm-visual">
+        <div class="rm-win wide">
+          <div class="rm-bar"><span class="rm-tab">Playlist.cs</span><span class="rm-tab">CarRental.cs</span></div>
+          <div class="rm-body">
+            <span class="rm-ln" style="width:60%"></span>
+            <span class="rm-ln" style="width:44%;margin-left:10%"></span>
+            <span class="rm-ln" style="width:52%;margin-left:10%"></span>
+            <span class="rm-ln" style="width:36%;margin-left:10%"></span>
+            <span class="rm-ln new" style="width:58%;margin-left:10%"></span>
+            <span class="rm-ln new" style="width:40%;margin-left:16%"></span>
+            <span class="rm-ln new" style="width:48%;margin-left:16%"></span>
+            <span class="rm-ln" style="width:14%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">מאחדים קוד וממשיכים יחד</h3></div>
+      <p class="rm-text">כשהכול עובד, מאחדים לפרויקט אחד וכותבים בו קוד לפי הוראות.</p>
+    </div>
+
+    <div class="rm-arrow"><svg width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 12H6M16 3 6 12l10 9"/></svg></div>
+
+    <div class="rm-stage">
+      <div class="rm-visual">
+        <div class="rm-winwrap">
+          <div class="rm-win wide">
+            <div class="rm-bar"><span class="rm-tab">Playlist.cs</span><span class="rm-tab">CarRental.cs</span></div>
+            <div class="rm-body">
+              <span class="rm-ln" style="width:60%"></span>
+              <div class="rm-dup">
+                <span class="rm-ln new" style="width:58%;margin-left:10%"></span>
+                <span class="rm-ln new" style="width:40%;margin-left:16%"></span>
+              </div>
+              <span class="rm-ln" style="width:36%;margin-left:10%"></span>
+              <div class="rm-dup">
+                <span class="rm-ln new" style="width:58%;margin-left:10%"></span>
+                <span class="rm-ln new" style="width:40%;margin-left:16%"></span>
+              </div>
+              <span class="rm-ln" style="width:14%"></span>
+            </div>
+          </div>
+          <span class="rm-q">?</span>
+        </div>
+      </div>
+      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">משהו שתגלו בדרך</h3></div>
+      <p class="rm-text">שימו לב מה קורה בקוד ונגלה משהו חדש.</p>
+    </div>
+
+  </div>
+  <p class="rm-note">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+    הפרויקט המאוחד יבנה על הקוד שאתם בודקים. בדיקה טובה עכשיו חוסכת תקלות אחר כך.
+  </p>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight" data-label="בדיקות">
+  <h2 class="slide-title">בדיקת הקוד של בן/בת הזוג</h2>
   <div class="app-grid app-grid-5">
     <div class="app-card">
-      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">יצירה</h3></div>
-      <p class="app-text">צרו אוסף אחד, ולפחות 5 עצמים של המחלקה הבסיסית. השתמשו בשתי הפעולות הבונות של המחלקה הבסיסית. לעצמים שנוצרו בלי קטגוריה, קבעו אותה בעזרת פעולת ה־Set.</p>
+      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">הוספה</h3></div>
+      <p class="app-text">הוסיפו 5–6 עצמים, לפחות שניים מאותה קטגוריה. נסו להוסיף עצם שכבר קיים.</p>
+      <pre class="app-ex">Song song1 = new Song("Imagine", "Pop");
+playlist.AddSong(song1);   // true
+playlist.AddSong(song1);   // false</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">הוספה והדפסה</h3></div>
-      <p class="app-text">הוסיפו את העצמים לאוסף, והדפיסו אותו. נסו להוסיף שוב עצם שכבר נוסף, ובדקו שהוחזר false.</p>
+      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">עדכון</h3></div>
+      <p class="app-text">עדכנו עצם קיים ועצם שלא קיים. הדפיסו את הערך שחזר.</p>
+      <pre class="app-ex">playlist.PlaySong("Imagine", 4);  // true
+playlist.PlaySong("Nope", 4);   // false</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">עדכון השדה המספרי</h3></div>
-      <p class="app-text">זמנו את פעולת העדכון כמה פעמים. נסו גם שם שלא קיים, וגם ערך לא חוקי (למשל מספר שלילי). הדפיסו מה הוחזר.</p>
+      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">הסרה</h3></div>
+      <p class="app-text">הסירו את הראשון, את האחרון ועצם שלא קיים. אחרי הסרת האחרון הוסיפו עצם חדש. האם הוא נוסף בסוף?</p>
+      <pre class="app-ex">playlist.RemoveSong("Imagine");
+playlist.AddSong(song6);</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">4</span><h3 class="app-title">הסרה</h3></div>
-      <p class="app-text">הסירו את העצם הראשון, עצם מהאמצע והעצם האחרון, והדפיסו אחרי כל הסרה. אחרי הסרת האחרון הוסיפו עצם חדש והדפיסו. נסו גם להסיר עצם שלא קיים.</p>
+      <div class="app-head"><span class="app-num">4</span><h3 class="app-title">חיפוש וסינון</h3></div>
+      <p class="app-text">בדקו קטגוריה עם כמה עצמים, קטגוריה עם עצם אחד וקטגוריה שאין בה אף עצם.</p>
+      <pre class="app-ex">playlist.CountInGenre("Rock");
+playlist.TopInGenre("Jazz");</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">5</span><h3 class="app-title">חיפוש וסינון לפי קטגוריה</h3></div>
-      <p class="app-text">בחרו קטגוריה שיש בה עצמים, וזמנו עבורה את הספירה, הרשימה לפי ג'אנר והעצם המוביל. הדפיסו. חזרו על זה עם קטגוריה שאין בה עצמים.</p>
+      <div class="app-head"><span class="app-num">5</span><h3 class="app-title">הדפסה</h3></div>
+      <p class="app-text">הדפיסו את האוסף אחרי כל שינוי, ובדקו שהתוצאה היא מה שציפיתם.</p>
+      <pre class="app-ex">Console.WriteLine(playlist);</pre>
     </div>
-    <!--div class="app-card">
-      <div class="app-head"><span class="app-num">6</span><h3 class="app-title">פעולה חיצונית</h3></div>
-      <p class="app-text">כתבו ב־Program פעולה סטטית שמקבלת את הרשימה שמחזירה פעולת הסינון, וסופרת בה עצמים לפי תנאי על השדה המספרי.</p>
-    </div-->
   </div>
-  <p class="app-bonus">בונוס: הדפיסו את הרשימה הממוינת לפי השדה המספרי.</p>
+  <p class="app-bonus">בסוף השאירו באוסף לפחות 5 עצמים. נמשיך לעבוד איתם.</p>
   <div class="page-foot" aria-hidden="true"></div>
 </section>
 
-<section class="slide content ref-slide tight" data-label="מחלקת יישום">
-  <div class="solo-head">
-    <h2 class="slide-title">צרו מחלקת יישום</h2>
-    <div class="solo-tabs">
-      <button type="button" class="on" data-cls="musicapp">MusicApp</button>
-      <button type="button" data-cls="school">School</button>
-      <button type="button" data-cls="rentalcompany">RentalCompany</button>
-      <button type="button" data-cls="league">League</button>
+<section class="slide content ref-slide tight" data-label="GetSongList">
+  <h2 class="slide-title">סיימתם לבדוק? הוסיפו למחלקות האוסף עוד פעולה אחת</h2>
+  <div class="pair">
+    <div class="pair-col">
+      <span class="pair-tag he">בודקים</span>
+      <div class="code-block pair-code">Node&lt;Song&gt; list = playlist.GetSongList();
+Console.WriteLine(list.GetValue());
+<span class="cm">// prints the first song</span></div>
+    </div>
+    <div class="pair-col">
+      <span class="pair-tag he">מוסיפים למחלקת האוסף</span>
+      <div class="code-block pair-code">public Node&lt;<span class="hl-type">Song</span>&gt; GetSongList()
+{
+    return this.songList;
+}</div>
     </div>
   </div>
-
-  <div class="solo-card" data-cls="musicapp">
-    <pre class="gx-code">public class <span class="cn">MusicApp</span>
-{</pre>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">תכונות</span>
-      <pre class="gx-code">    private Playlist[] <span class="cn">playlists</span>;
-    private int count;</pre>
-    </div>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">פעולות</span>
-      <div class="grp"><pre class="gx-code">    public MusicApp(int size)  <span class="cm">// size = max playlists</span></pre><span class="grp-label">בנאי</span></div>
-      <div class="grp"><pre class="gx-code">    public bool AddPlaylist(Playlist playlist)  <span class="cm">// false if full</span></pre><span class="grp-label">הוספה</span></div>
-      <div class="grp"><pre class="gx-code">    public Playlist FindPlaylist(string playlistName)  <span class="cm">// null if not found</span></pre><span class="grp-label">חיפוש לפי שם</span></div>
-      <div class="grp"><pre class="gx-code">    public Song TopInGenreInApp(string genre)
-        <span class="cm">// uses TopInGenre of each playlist</span>
-    public int CountInGenreInApp(string genre)
-        <span class="cm">// uses CountInGenre of each playlist</span></pre><span class="grp-label">שאילתות על כל המבנה</span></div>
-      <div class="grp"><pre class="gx-code">    public override string ToString()</pre><span class="grp-label">הדפסה</span></div>
-    </div>
-    <pre class="gx-code">}</pre>
-  </div>
-  <div class="solo-card" data-cls="school" hidden>
-    <pre class="gx-code">public class <span class="cn">School</span>
-{</pre>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">תכונות</span>
-      <pre class="gx-code">    private Kita[] <span class="cn">kitot</span>;
-    private int count;</pre>
-    </div>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">פעולות</span>
-      <div class="grp"><pre class="gx-code">    public School(int size)  <span class="cm">// size = max kitot</span></pre><span class="grp-label">בנאי</span></div>
-      <div class="grp"><pre class="gx-code">    public bool AddKita(Kita kita)  <span class="cm">// false if full</span></pre><span class="grp-label">הוספה</span></div>
-      <div class="grp"><pre class="gx-code">    public Kita FindKita(string kitaName)  <span class="cm">// null if not found</span></pre><span class="grp-label">חיפוש לפי שם</span></div>
-      <div class="grp"><pre class="gx-code">    public Student BestInMegamaInSchool(string megama)
-        <span class="cm">// uses BestInMegama of each kita</span>
-    public int CountInMegamaInSchool(string megama)
-        <span class="cm">// uses CountInMegama of each kita</span></pre><span class="grp-label">שאילתות על כל המבנה</span></div>
-      <div class="grp"><pre class="gx-code">    public override string ToString()</pre><span class="grp-label">הדפסה</span></div>
-    </div>
-    <pre class="gx-code">}</pre>
-  </div>
-  <div class="solo-card" data-cls="rentalcompany" hidden>
-    <pre class="gx-code">public class <span class="cn">RentalCompany</span>
-{</pre>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">תכונות</span>
-      <pre class="gx-code">    private CarRental[] <span class="cn">branches</span>;
-    private int count;</pre>
-    </div>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">פעולות</span>
-      <div class="grp"><pre class="gx-code">    public RentalCompany(int size)  <span class="cm">// size = max branches</span></pre><span class="grp-label">בנאי</span></div>
-      <div class="grp"><pre class="gx-code">    public bool AddBranch(CarRental branch)  <span class="cm">// false if full</span></pre><span class="grp-label">הוספה</span></div>
-      <div class="grp"><pre class="gx-code">    public CarRental FindBranch(string branchName)  <span class="cm">// null if not found</span></pre><span class="grp-label">חיפוש לפי שם</span></div>
-      <div class="grp"><pre class="gx-code">    public Car LowestKmOfModelInCompany(string model)
-        <span class="cm">// uses LowestKmOfModel of each branch</span>
-    public int CountOfModelInCompany(string model)
-        <span class="cm">// uses CountOfModel of each branch</span></pre><span class="grp-label">שאילתות על כל המבנה</span></div>
-      <div class="grp"><pre class="gx-code">    public override string ToString()</pre><span class="grp-label">הדפסה</span></div>
-    </div>
-    <pre class="gx-code">}</pre>
-  </div>
-  <div class="solo-card" data-cls="league" hidden>
-    <pre class="gx-code">public class <span class="cn">League</span>
-{</pre>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">תכונות</span>
-      <pre class="gx-code">    private SoccerTeam[] <span class="cn">teams</span>;
-    private int count;</pre>
-    </div>
-    <div class="solo-sec">
-      <span class="pair-tag solo-tag">פעולות</span>
-      <div class="grp"><pre class="gx-code">    public League(int size)  <span class="cm">// size = max teams</span></pre><span class="grp-label">בנאי</span></div>
-      <div class="grp"><pre class="gx-code">    public bool AddTeam(SoccerTeam team)  <span class="cm">// false if full</span></pre><span class="grp-label">הוספה</span></div>
-      <div class="grp"><pre class="gx-code">    public SoccerTeam FindTeam(string teamName)  <span class="cm">// null if not found</span></pre><span class="grp-label">חיפוש לפי שם</span></div>
-      <div class="grp"><pre class="gx-code">    public Player TopScorerInPositionInLeague(string position)
-        <span class="cm">// uses TopScorerInPosition of each team</span>
-    public int CountInPositionInLeague(string position)
-        <span class="cm">// uses CountInPosition of each team</span></pre><span class="grp-label">שאילתות על כל המבנה</span></div>
-      <div class="grp"><pre class="gx-code">    public override string ToString()</pre><span class="grp-label">הדפסה</span></div>
-    </div>
-    <pre class="gx-code">}</pre>
-  </div>
-
+  <p class="rm-note call">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+    עצרו להציג את הבדיקות. וקבלו הנחיות לשלב הבא
+  </p>
   <div class="page-foot" aria-hidden="true"></div>
 </section>
 
-<section class="slide content ref-slide tight" data-label="בדיקת מחלקת היישום">
-  <h2 class="slide-title">בדקו את מחלקת היישום:</h2>
+<section class="slide content ref-slide tight step-slide" data-steps="6" data-label="איחוד הפרויקטים">
+  <h2 class="slide-title">איחוד הפרויקטים</h2>
+  <div class="mg">
+
+    <div class="mg-steps">
+      <div class="mg-step" data-hl="0" data-flash="1-"><span class="app-num">1</span><div><h3 class="mg-step-title">בוחרים פרויקט</h3><p class="mg-step-text">מחליטים באיזה פרויקט ממשיכים. אליו נוסיף את הקבצים של הפרוייקט השני.</p></div></div>
+      <div class="mg-step" data-hl="1" data-flash="2-" data-ptr="0"><span class="app-num">2</span><div><h3 class="mg-step-title">מעבירים קבצים</h3><p class="mg-step-text">מעבירים למחשב השני רק את שתי המחלקות: מחלקת העצם ומחלקת האוסף.</p></div></div>
+      <div class="mg-step" data-hl="2" data-flash="3-" data-ptr="0-1"><span class="app-num">3</span><div><h3 class="mg-step-title">מוסיפים לפרויקט</h3><p class="mg-step-text">ב-Solution Explorer: קליק ימני על הפרויקט ואז <code>Add › Existing Item…</code></p></div></div>
+      <div class="mg-step" data-hl="3" data-flash="4-" data-ptr="0-2"><span class="app-num">4</span><div><h3 class="mg-step-title">Node.cs פעם אחת</h3><p class="mg-step-text">המחלקה Node כבר קיימת בפרויקט. לא מוסיפים אותה שוב.</p></div></div>
+      <div class="mg-step" data-hl="4" data-flash="5-" data-ptr="0-3"><span class="app-num">5</span><div><h3 class="mg-step-title">namespace זהה</h3><p class="mg-step-text">בקבצים שהוספתם, משנים את ה-namespace לזה שמופיע ב-Program.cs. אם ב-Program.cs אין namespace, מוחקים אותו.</p></div></div>
+      <div class="mg-step" data-hl="5" data-flash="6-" data-ptr="0-4"><span class="app-num">6</span><div><h3 class="mg-step-title">Main אחד</h3><p class="mg-step-text">מעתיקים את הבדיקות של הפרויקט השני אל ה-Main, מריצים, ושתי המחלקות עובדות.</p></div></div>
+    </div>
+
+    <div class="mg-diagram">
+      <div class="mg-col">
+        <span class="mg-label">הפרויקט שבחרתם</span>
+        <div class="rm-win" data-flash="0-">
+          <div class="rm-bar"><span class="rm-tab">Solution Explorer</span></div>
+          <div class="mg-tree">
+            <span class="mg-file" data-flash="3">Node.cs</span>
+            <span class="mg-file">Song.cs</span>
+            <span class="mg-file">Playlist.cs</span>
+            <span class="mg-file new" data-show="2-" data-flash="2">Car.cs<span class="mg-badge" data-show="4-">namespace ✓</span></span>
+            <span class="mg-file new" data-show="2-" data-flash="2">CarRental.cs<span class="mg-badge" data-show="4-">namespace ✓</span></span>
+            <span class="mg-file" data-flash="5">Program.cs<span class="mg-badge" data-show="5-">+ בדיקות</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-arrow" data-show="1-" style="height:auto;margin-top:40px"><svg width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 12H6M16 3 6 12l10 9"/></svg></div>
+
+      <div class="mg-col">
+        <span class="mg-label">הפרויקט השני</span>
+        <div class="rm-win">
+          <div class="rm-bar"><span class="rm-tab">Solution Explorer</span></div>
+          <div class="mg-tree">
+            <span class="mg-file gone" data-flash="3-">Node.cs</span>
+            <span class="mg-file" data-flash="1">Car.cs</span>
+            <span class="mg-file" data-flash="1">CarRental.cs</span>
+            <span class="mg-file" data-flash="5">Program.cs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight" data-label="פעולות ב-Program">
+  <h2 class="slide-title">פעולות סטטיות (במחלקה הראשית)</h2>
+  <p class="st-lead">עד עכשיו הפעולות שלנו היו בתוך מחלקת האוסף. עכשיו נוסיף פעולות סטטיות במחלקה הראשית Program - ונשלח להן את שרשרת החוליות כפרמטר.</p>
+  <div class="gx-grid">
+    <div class="gx-card st-card m1">
+      <div class="st-head"><span class="app-num">1</span><span class="st-name">CountNodes</span></div>
+      <span class="gx-cap">מחזירה כמה איברים יש ברשימה</span>
+      <pre class="gx-code">public static int CountNodes(Node&lt;Song&gt; list)
+{
+    ...
+}</pre>
+    </div>
+    <div class="gx-card st-card m2">
+      <div class="st-head"><span class="app-num">2</span><span class="st-name">ItemInPosition</span></div>
+      <span class="gx-cap">מחזירה את האיבר במקום pos ברשימה (pos בין 1 ל-CountNodes)</span>
+      <pre class="gx-code">public static Song ItemInPosition(Node&lt;Song&gt; list, int pos)
+{
+    ...
+}</pre>
+    </div>
+  </div>
+  <div class="code-block pair-code st-main" dir="ltr"><span class="cm">// in Main:</span>
+Node&lt;Song&gt; songs = playlist.GetSongList();
+Console.WriteLine(<span class="c1">CountNodes</span>(songs));
+Console.WriteLine(<span class="c2">ItemInPosition</span>(songs, 1));
+Console.WriteLine(<span class="c2">ItemInPosition</span>(songs, <span class="c1">CountNodes</span>(songs)));</div>
+  <!--p class="rm-note" style="margin-top:40px">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    כל אחד/ת כותב/ת את הפעולות עבור הטיפוס שלו/ה, ובן/בת הזוג מכוון/ת.
+  </p-->
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content intro-slide step-slide" data-steps="2" data-label="מה הבעיה?">
+  <span class="intro-eyebrow">עצרו רגע</span>
+  <h2 class="intro-title">אתם רואים בעיה בקוד?</h2>
+  <p class="rm-note" data-show="1-" style="margin-top:56px">השוו את שתי הגרסאות של CountNodes. מה שונה ביניהן?</p>
+  <p class="rm-note" data-show="2-" style="margin-top:24px">ואם תיכנס לפרויקט מחלקה שלישית?</p>
+</section>
+
+<section class="slide content ref-slide tight" data-label="פעולה גנרית">
+  <h2 class="slide-title">פעולה סטטית גנרית</h2>
+  <div class="pair">
+    <div class="pair-col">
+      <span class="pair-tag he">ניתן לזמן עם כל רשימה</span>
+      <div class="code-block pair-code"><span class="cm">// in Main:</span>
+Console.WriteLine(CountNodes(songs));
+Console.WriteLine(CountNodes(cars));</div>
+    </div>
+    <div class="pair-col">
+      <span class="pair-tag">T = כל טיפוס</span>
+      <div class="code-block pair-code">public static int CountNodes<span class="hl-type">&lt;T&gt;</span>(Node<span class="hl-type">&lt;T&gt;</span> list)
+{
+    int count = 0;
+    Node<span class="hl-type">&lt;T&gt;</span> current = list;
+    while (current != null)
+    {
+        count++;
+        current = current.GetNext();
+    }
+    return count;
+}</div>
+    </div>
+  </div>
+  <p class="rm-note" style="margin-top:40px">פעולה אחת לכל הטיפוסים. ה-&lt;T&gt; אחרי שם הפעולה אומר שהיא עובדת עם טיפוס כלשהו.</p>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight" data-label="משנים בפרויקט">
+  <h2 class="slide-title">עכשיו בפרויקט שלכם</h2>
+  <div class="app-grid" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+    <div class="app-card" style="grid-column:auto">
+      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">CountNodes</h3></div>
+      <p class="app-text">מוחקים את שתי הגרסאות וכותבים במקומן פעולה גנרית אחת.</p>
+      <pre class="app-ex">CountNodes&lt;T&gt;(Node&lt;T&gt; list)</pre>
+    </div>
+    <div class="app-card" style="grid-column:auto">
+      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">ItemInPosition</h3></div>
+      <p class="app-text">הופכים גם אותה לגנרית. שימו לב: גם הטיפוס שהיא מחזירה משתנה.</p>
+      <pre class="app-ex">ItemInPosition(songs, 2);
+ItemInPosition(cars, 2);</pre>
+    </div>
+    <div class="app-card" style="grid-column:auto">
+      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">מריצים ומשווים</h3></div>
+      <p class="app-text">הפלט צריך להיות זהה לפלט שהיה לפני השינוי, בשתי הרשימות.</p>
+    </div>
+  </div>
+  <!--p class="app-bonus">סיימתם? כתבו פעולה גנרית שמדפיסה רשימה מכל טיפוס.</p-->
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<!--section class="slide cover" data-label="סיום" style="justify-content:flex-start;padding-top:80px">
+  <div class="rise" style="align-items:center;gap:36px;background:color-mix(in srgb, var(--color-accent) 4%, var(--color-bg));border-radius:32px;padding:48px 64px;max-width:1300px;box-shadow:var(--shadow-sm)">
+    <h2 class="display" style="font-size:52px;margin:0">דגשים לזכור:</h2>
+    <ul style="display:flex;flex-direction:column;gap:24px;margin:0;padding:0;list-style:none;text-align:right;font-size:var(--type-subtitle);width:100%">
+      <li style="display:flex;align-items:center;gap:20px;justify-content:flex-start"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span><span>ניתן ליצור מחלקה לניהול שרשרת חוליות</span></li>
+      <li style="display:flex;align-items:center;gap:20px;justify-content:flex-start"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent-2);color:var(--color-bg);font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span><span>בדיקה של מקרי קצה, ובמיוחד בעיניים של מישהו אחר, מגלה תקלות</span></li>
+      <li style="display:flex;align-items:center;gap:20px;justify-content:flex-start"><span style="width:44px;height:44px;border-radius:50%;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span><span>פעולה סטטית גנרית נכתבת פעם אחת ועובדת על טיפוסים שונים</span></li>
+    </ul>
+  </div>
+  <div class="bottom-topic meta"><span>מבני נתונים  |  כיתה י"א</span></div>
+  <div class="pin-bottom meta"><span>hagit.yidov@ironialef.org.il</span></div>
+</section-->
+
+<section class="slide content ref-slide tight" data-label="מערך של אוספים">
+  <h2 class="slide-title">משימת רשות: מערך של אוספים</h2>
   <div class="app-grid app-grid-4">
     <div class="app-card">
-      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">יצירה</h3></div>
-      <p class="app-text">צרו עצם של מחלקת היישום (למשל MusicApp) בגודל 3. צרו 3 אוספים, והוסיפו לכל אחד כמה עצמים.</p>
+      <div class="app-head"><span class="app-num">1</span><h3 class="app-title">יוצרים מערך</h3></div>
+      <p class="app-text">צרו מערך של 3 אוספים מהטיפוס שלכם, והוסיפו לכל אוסף כמה עצמים.</p>
+      <pre class="app-ex">Playlist[] lists = new Playlist[3];</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">הוספה</h3></div>
-      <p class="app-text">הוסיפו את 3 האוספים לעצם היישום. נסו להוסיף אוסף רביעי, ובדקו שהוחזר false.</p>
+      <div class="app-head"><span class="app-num">2</span><h3 class="app-title">כמה בכל אוסף?</h3></div>
+      <p class="app-text">עברו על המערך והדפיסו כמה עצמים יש בכל אוסף. השתמשו ב-CountNodes הגנרית.</p>
+      <pre class="app-ex">CountNodes(lists[i].GetSongList())</pre>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">חיפוש לפי שם</h3></div>
-      <p class="app-text">חפשו אוסף לפי השם שלו והדפיסו אותו. נסו גם שם שלא קיים, ובדקו שהוחזר null.</p>
+      <div class="app-head"><span class="app-num">3</span><h3 class="app-title">האוסף הגדול ביותר</h3></div>
+      <p class="app-text">כתבו פעולה סטטית שמקבלת את המערך ומחזירה את האוסף עם הכי הרבה עצמים.</p>
     </div>
     <div class="app-card">
-      <div class="app-head"><span class="app-num">4</span><h3 class="app-title">שאילתות על כל האוספים</h3></div>
-      <p class="app-text">בחרו קטגוריה, וזמנו עבורה את שתי הפעולות שעוברות על כל האוספים. הדפיסו. חזרו על זה עם קטגוריה שאין בה עצמים.</p>
+      <div class="app-head"><span class="app-num">4</span><h3 class="app-title">חיפוש</h3></div>
+      <p class="app-text">כתבו פעולה סטטית שמקבלת את המערך ושם, ומחזירה את האוסף שבו השם מופיע, או null אם לא נמצא.</p>
     </div>
   </div>
   <div class="page-foot" aria-hidden="true"></div>
 </section>
-
 
 
 <button class="nav-btn nav-prev" id="prevBtn" aria-label="השקופית הקודמת">&lsaquo;</button>
@@ -1323,8 +1505,14 @@ a:hover { color: var(--color-accent-600); }
     if (e.key === 'ArrowRight' || e.key === ' ') show(idx + 1);
     if (e.key === 'ArrowLeft') show(idx - 1);
   });
-  function scale() {
+  /*function scale() {
     var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    document.getElementById('stage').style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+  }*/
+  var baseDPR = window.devicePixelRatio;
+  function scale() {
+    var zoom = window.devicePixelRatio / baseDPR;
+    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080) * zoom;
     document.getElementById('stage').style.transform = 'translate(-50%, -50%) scale(' + s + ')';
   }
   window.addEventListener('resize', scale);
