@@ -785,6 +785,53 @@ a:hover { color: var(--color-accent-600); }
 
 
 
+
+.tr-slide { padding-left: 72px !important; padding-right: 72px !important; }
+.tr-lead { margin: 0 0 20px; font-size: 30px; line-height: 1.4; text-wrap: pretty; }
+.tr-split { flex: 1; min-height: 0; display: grid; grid-template-columns: 876px 860px; gap: 40px; align-items: stretch; }
+.tr-diag { position: relative; direction: ltr; width: 876px; align-self: start; }
+.tr-slide .tr-code { margin: 0 !important; max-width: none; min-height: 0; height: 100%; overflow-y: auto; font-size: 20px; line-height: 1.5; padding: 24px 14px; white-space: pre; direction: ltr; scrollbar-width: thin; scrollbar-color: var(--color-accent-2-600) transparent; }
+.tr-line { display: block; padding: 0 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+.tr-line.on { color: var(--color-accent-300); font-weight: 700; background: color-mix(in srgb, var(--color-accent-300) 16%, transparent); }
+.tr-links { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.tr-node { position: absolute; display: flex; flex-direction: column; height: 150px; border-radius: 16px; background: var(--color-neutral-100); border: 3px solid var(--color-neutral-300); box-shadow: var(--shadow-sm); overflow: hidden; transition: left 0.4s, top 0.4s, opacity 0.4s, border-color 0.3s, box-shadow 0.3s; }
+.tr-val { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.tr-name { font-size: 25px; font-weight: 700; color: var(--color-text); line-height: 1.15; }
+.tr-meg { font-size: 19px; color: var(--color-neutral-700); line-height: 1.2; }
+.tr-grade { font-size: 22px; font-weight: 700; padding: 0 8px; border-radius: 6px; line-height: 1.25; transition: background 0.3s; }
+.tr-next { height: 38px; flex: none; display: flex; align-items: center; justify-content: center; padding: 0 12px; border-top: 2px solid var(--color-neutral-300); background: var(--color-neutral-200); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 18px; color: var(--color-neutral-700); }
+.tr-next.link { justify-content: flex-end; color: var(--color-neutral-800); }
+.tr-node.new { border-color: var(--color-accent-2-500); }
+.tr-node.check { border-color: var(--color-accent); box-shadow: 0 0 0 7px var(--color-accent-200); }
+.tr-node.ret { border-color: var(--color-accent-2-600); box-shadow: 0 0 0 7px var(--color-accent-2-200); }
+.tr-node.gone { opacity: 0.3; border-style: dashed; }
+.tr-node.dummy { border-style: dashed; }
+.tr-node.dummy .tr-name { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 20px; color: var(--color-neutral-600); font-weight: 400; }
+.tr-node.flash .tr-grade { background: var(--color-accent-200); color: var(--color-accent-800); }
+.tr-ptr { position: absolute; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; transition: left 0.4s, top 0.4s; color: var(--color-accent-600); }
+.tr-ptr.down { flex-direction: column-reverse; }
+.tr-ptr.attr { color: var(--color-accent-2-600); }
+.tr-pill { height: 38px; padding: 0 14px; border-radius: 999px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 22px; font-weight: 700; line-height: 38px; white-space: nowrap; background: var(--color-accent-100); color: var(--color-accent-800); position: relative; z-index: 3; }
+.tr-ptr.attr .tr-pill { background: var(--color-accent-2-200); color: var(--color-accent-2-800); }
+.tr-stem { width: 3px; background: currentColor; position: relative; z-index: 1; }
+.tr-head { position: relative; z-index: 1; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 12px solid currentColor; }
+.tr-ptr.down .tr-head { border-top: 0; border-bottom: 12px solid currentColor; }
+.tr-rowlabel { position: absolute; left: 0; direction: rtl; font-size: 24px; font-weight: 700; color: var(--color-accent-2-700); }
+.tr-vars { position: absolute; right: 0; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 12px; }
+.tr-var { padding: 6px 18px; border-radius: 999px; background: var(--color-neutral-200); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 22px; transition: background 0.3s; }
+.tr-var.chg { background: var(--color-accent-200); }
+.tr-var.ret { background: var(--color-accent-2-200); color: var(--color-accent-2-800); font-weight: 700; }
+.tr-count { position: absolute; right: 0; bottom: 0; direction: rtl; white-space: nowrap; font-size: 20px; color: var(--color-neutral-600); }
+.tr-num { display: inline-block; margin-inline-start: 20px; padding: 2px 18px; border-radius: 999px; background: var(--color-accent-2-200); color: var(--color-accent-2-800); font-family: var(--font-body); font-size: 26px; font-weight: 700; vertical-align: middle; }
+.tr-slide { position: absolute; }
+.tr-scen { position: absolute; top: var(--pad-top); left: 72px; display: flex; align-items: center; gap: 10px; direction: rtl; z-index: 5; }
+.tr-scen-label { font-size: 24px; font-weight: 700; color: var(--color-neutral-700); }
+.tr-sc { font-family: var(--font-body); font-size: 22px; font-weight: 600; padding: 8px 20px; border-radius: 999px; border: 2px solid var(--color-neutral-300); background: var(--color-neutral-100); color: var(--color-text); cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+.tr-sc:hover { background: var(--color-accent-100); border-color: var(--color-accent-300); }
+.tr-sc:active { background: var(--color-accent-200); }
+.tr-sc:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.tr-sc.on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-bg); }
+.tr-var.end { background: var(--color-accent-2-600); color: var(--color-bg); font-family: var(--font-body); font-weight: 700; direction: rtl; }
 </style>
 </head>
 <body>
@@ -1082,6 +1129,102 @@ a:hover { color: var(--color-accent-600); }
 
   <div class="page-foot" aria-hidden="true"></div>
 </section>
+
+<section class="slide content ref-slide tight" data-label="פתרון: Student">
+  <h2 class="slide-title">פתרון: מחלקת Student</h2>
+  <div class="zoom-overlay"></div>
+  <div class="code-block ref-code zoomable" dir="ltr" data-fullcode="student"></div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight" data-label="פתרון: Kita">
+  <h2 class="slide-title">פתרון: מחלקת Kita</h2>
+  <div class="zoom-overlay"></div>
+  <div class="code-block ref-code zoomable" dir="ltr" data-fullcode="kita"></div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="take" data-label="Volunteer">
+  <!--h2 class="slide-title">עדכון: <span dir="ltr">Volunteer</span><span class="tr-num">1/7</span></h2-->
+  <h2 class="slide-title">עדכון תכונה: <span class="tr-num">1/7</span></h2>
+  <p class="tr-lead">מוסיפים 5 שעות התנדבות ל-Maya, לפי השם.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="add" data-label="AddStudent">
+  <h2 class="slide-title">הוספה: <span dir="ltr">AddStudent</span><span class="tr-num">2/7</span></h2>
+  <div class="tr-scen"></div>
+  <p class="tr-lead">מוסיפים תלמיד חדש, Omer, שעדיין לא נמצא ברשימה.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="remove" data-label="RemoveStudent">
+  <h2 class="slide-title">הסרה: <span dir="ltr">RemoveStudent</span><span class="tr-num">3/7</span></h2>
+  <div class="tr-scen"></div>
+  <p class="tr-lead">מסירים את Shira, התלמידה האחרונה ברשימה.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="list1" data-label="StudentsInMegama 1">
+  <h2 class="slide-title">רשימה חדשה: <span dir="ltr">StudentsInMegama</span><span class="tr-num">4/7</span></h2>
+  <p class="tr-lead">בונים רשימה חדשה של התלמידים במגמת Computers. בכל הוספה בודקים אם הרשימה החדשה עדיין ריקה.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="list2" data-label="StudentsInMegama 2">
+  <h2 class="slide-title">רשימה חדשה עם חוליית דמה: <span dir="ltr">StudentsInMegama</span><span class="tr-num">5/7</span></h2>
+  <p class="tr-lead">אותה פעולה בשיטה אחרת: מתחילים מחוליית דמה, ובסוף מחזירים את מה שאחריה.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="count" data-label="CountInMegama">
+  <h2 class="slide-title">ספירה: <span dir="ltr">CountInMegama</span><span class="tr-num">6/7</span></h2>
+  <p class="tr-lead">סופרים כמה תלמידים יש במגמת Computers.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+<section class="slide content ref-slide tight step-slide tr-slide" data-steps="0" data-trace="best" data-label="BestInMegama">
+  <h2 class="slide-title">הטוב ביותר: <span dir="ltr">BestInMegama</span><span class="tr-num">7/7</span></h2>
+  <div class="tr-scen"></div>
+  <p class="tr-lead">מוצאים את התלמיד עם הכי הרבה שעות התנדבות במגמת Computers.</p>
+  <div class="tr-split">
+    <div class="tr-diag"></div>
+    <div class="code-block tr-code"></div>
+  </div>
+  <div class="page-foot" aria-hidden="true"></div>
+</section>
+
+
+
+
+
+
+
+
 
 <section class="slide content ref-slide tight" data-label="מפת השיעור">
   <h2 class="slide-title">השלבים הבאים:</h2>
@@ -1420,6 +1563,593 @@ ItemInPosition(cars, 2);</pre>
 </div>
 
 <script>
+(function ENGINE() {
+  var M = {};
+  M.take = String.raw`public bool Volunteer(string name, int hours) @sig
+{
+    Node<Student> current = this.studentList; @init
+    while (current != null) @while
+    {
+        Student student = current.GetValue(); @get
+        if (student.GetName() == name) @if
+        {
+            int total = student.GetVolunteerHours() + hours; @sum
+            student.SetVolunteerHours(total); @set
+            return true; @rt
+        }
+        current = current.GetNext(); @adv
+    }
+    return false;
+}`;
+  M.add = String.raw`public bool AddStudent(Student student) @sig
+{
+    Node<Student> current = this.studentList; @init
+    while (current != null) @while
+    {
+        if (current.GetValue().GetName() == student.GetName()) @if
+        {
+            return false; @rf
+        }
+        current = current.GetNext(); @adv
+    }
+    Node<Student> newNode = new Node<Student>(student); @new
+    if (this.studentList == null) @ifnull
+    {
+        this.studentList = newNode; @sethead
+    }
+    else
+    {
+        this.lastStudent.SetNext(newNode); @link
+    }
+    this.lastStudent = newNode; @last
+    return true; @rt
+}`;
+  M.remove = String.raw`public bool RemoveStudent(string name) @sig
+{
+    if (this.studentList == null) @empty
+    {
+        return false;
+    }
+    if (this.studentList.GetValue().GetName() == name) @first
+    {
+        this.studentList = this.studentList.GetNext(); @headnext
+        if (this.studentList == null) @ifonly
+        {
+            this.lastStudent = null;
+        }
+        return true; @rt1
+    }
+    Node<Student> prev = this.studentList; @prev
+    while (prev.GetNext() != null) @while
+    {
+        if (prev.GetNext().GetValue().GetName() == name) @if
+        {
+            if (prev.GetNext() == this.lastStudent) @iflast
+            {
+                this.lastStudent = prev; @setlast
+            }
+            prev.SetNext(prev.GetNext().GetNext()); @unlink
+            return true; @rt
+        }
+        prev = prev.GetNext(); @adv
+    }
+    return false; @rf
+}`;
+  M.count = String.raw`public int CountInMegama(string megama) @sig
+{
+    int count = 0; @init
+    Node<Student> current = this.studentList; @cur
+    while (current != null) @while
+    {
+        if (current.GetValue().GetMegama() == megama) @if
+        {
+            count++; @inc
+        }
+        current = current.GetNext(); @adv
+    }
+    return count; @rt
+}`;
+  M.list1 = String.raw`public Node<Student> StudentsInMegama(string megama) @sig
+{
+    Node<Student> first = null; @first
+    Node<Student> last = null; @last
+    Node<Student> current = this.studentList; @init
+    while (current != null) @while
+    {
+        if (current.GetValue().GetMegama() == megama) @if
+        {
+            Node<Student> newNode = @new
+                new Node<Student>(current.GetValue());
+            if (first == null) @iffirst
+            {
+                first = newNode; @setfirst
+            }
+            else
+            {
+                last.SetNext(newNode); @link
+            }
+            last = newNode; @setlast
+        }
+        current = current.GetNext(); @adv
+    }
+    return first; @rt
+}`;
+  M.list2 = String.raw`public Node<Student> StudentsInMegama(string megama) @sig
+{
+    Node<Student> dummy = new Node<Student>(null); @dummy
+    Node<Student> last = dummy; @last
+    Node<Student> current = this.studentList; @init
+    while (current != null) @while
+    {
+        if (current.GetValue().GetMegama() == megama) @if
+        {
+            last.SetNext(new Node<Student>(current.GetValue())); @link
+            last = last.GetNext(); @setlast
+        }
+        current = current.GetNext(); @adv
+    }
+    return dummy.GetNext(); @rt
+}`;
+  M.best = String.raw`public Student BestInMegama(string megama) @sig
+{
+    Student best = null; @init
+    Node<Student> current = this.studentList; @cur
+    while (current != null) @while
+    {
+        Student student = current.GetValue(); @get
+        if (student.GetMegama() == megama) @if
+        {
+            if (best == null || @if2
+                student.GetVolunteerHours() > best.GetVolunteerHours())
+            {
+                best = student; @set
+            }
+        }
+        current = current.GetNext(); @adv
+    }
+    return best; @rt
+}`;
+  M.ranked = String.raw`public Node<Student> RankedByHours()
+{
+    Node<Student> sorted = null;
+    Node<Student> current = this.studentList;
+    while (current != null)
+    {
+        Student student = current.GetValue();
+        Node<Student> newNode = new Node<Student>(student);
+        if (sorted == null ||
+            student.GetVolunteerHours() > sorted.GetValue().GetVolunteerHours())
+        {
+            newNode.SetNext(sorted);
+            sorted = newNode;
+        }
+        else
+        {
+            Node<Student> pos = sorted;
+            while (pos.GetNext() != null &&
+                   pos.GetNext().GetValue().GetVolunteerHours() >= student.GetVolunteerHours())
+            {
+                pos = pos.GetNext();
+            }
+            newNode.SetNext(pos.GetNext());
+            pos.SetNext(newNode);
+        }
+        current = current.GetNext();
+    }
+    return sorted;
+}`;
+
+  function strip(src) { return src.split('\n').map(function (l) { return l.replace(/\s*@\w+\s*$/, ''); }).join('\n'); }
+  function indent(src) { return strip(src).split('\n').map(function (l) { return l ? '    ' + l : l; }).join('\n'); }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  var SEP = '    //-----------------------------------';
+
+  var FULL = {};
+  FULL.student = String.raw`using System;
+
+public class Student
+{
+    private string name;
+    private string megama;      // Music, Sports, Philosophy, Computers
+    private int volunteerHours;
+
+    //-----------------------------------
+    //constructors
+    public Student(string name)
+    {
+        this.name = name;
+        this.megama = "";
+        this.volunteerHours = 0;
+    }
+    public Student(string name, string megama)
+    {
+        this.name = name;
+        this.megama = megama;
+        this.volunteerHours = 0;
+    }
+    //-----------------------------------
+    //getters
+    public string GetName()
+    {
+        return this.name;
+    }
+    public string GetMegama()
+    {
+        return this.megama;
+    }
+    public int GetVolunteerHours()
+    {
+        return this.volunteerHours;
+    }
+    //-----------------------------------
+    //setters - set only a valid value, return true if it was set
+    public bool SetMegama(string megama)
+    {
+        if (megama == "Music" || megama == "Sports" ||
+            megama == "Philosophy" || megama == "Computers")
+        {
+            this.megama = megama;
+            return true;
+        }
+        return false;
+    }
+    public bool SetVolunteerHours(int volunteerHours)
+    {
+        if (volunteerHours >= 0)
+        {
+            this.volunteerHours = volunteerHours;
+            return true;
+        }
+        return false;
+    }
+    //-----------------------------------
+    //ToString
+    public override string ToString()
+    {
+        return this.name + " (" + this.megama + ", " + this.volunteerHours + " hours)";
+    }
+}`;
+  FULL.kita = [
+    'using System;', '', 'public class Kita', '{',
+    '    private string kitaName;', '    private Node<Student> studentList;', '    private Node<Student> lastStudent;', '',
+    SEP, '    //constructor',
+    '    public Kita(string kitaName)', '    {', '        this.kitaName = kitaName;', '        this.studentList = null;', '        this.lastStudent = null;', '    }',
+    SEP, '    //getters',
+    '    public string GetKitaName()', '    {', '        return this.kitaName;', '    }',
+    '    public Node<Student> GetStudentList()', '    {', '        return this.studentList;', '    }',
+    SEP, '    //add - false if already exists', indent(M.add),
+    SEP, '    //update - adds volunteer hours', indent(M.take),
+    SEP, '    //remove - false if not found', indent(M.remove),
+    SEP, '    //search and filter', indent(M.count),
+    '', '    //StudentsInMegama - version 1: check if the new list is still empty', indent(M.list1),
+    '', '    //StudentsInMegama - version 2: dummy node', '    //(keep only one of the two versions)', indent(M.list2),
+    '', indent(M.best),
+    SEP, '    //bonus - new list, most hours first', indent(M.ranked),
+    SEP, '    //ToString',
+    '    public override string ToString()', '    {',
+    '        string str = "Kita: " + this.kitaName + "\\n";',
+    '        Node<Student> current = this.studentList;',
+    '        while (current != null)', '        {',
+    '            str += current.GetValue() + "\\n";',
+    '            current = current.GetNext();', '        }',
+    '        return str;', '    }',
+    '}'
+  ].join('\n');
+  document.querySelectorAll('[data-fullcode]').forEach(function (el) { el.innerHTML = esc(FULL[el.dataset.fullcode]); });
+
+  var DATA = [['Noa', 'Computers', 12], ['Itay', 'Music', 30], ['Maya', 'Computers', 18], ['Yonatan', 'Sports', 6], ['Shira', 'Music', 24]];
+  var LAST = DATA.length - 1;
+  var ATTR = { studentList: 1, lastStudent: 1 };
+
+  function parse(src) {
+    var lines = [], keys = {};
+    src.split('\n').forEach(function (l, i) {
+      var m = l.match(/\s*@(\w+)\s*$/);
+      if (m) { keys[m[1]] = i; l = l.slice(0, m.index); }
+      lines.push(l);
+    });
+    return { lines: lines, keys: keys };
+  }
+  function Sim(keys, empty) {
+    this.keys = keys; this.frames = []; this.nodes = {}; this.row1 = []; this.row2 = [];
+    this.ptrs = []; this.vars = []; this.check = null; this.flash = null; this.ret = null; this.chg = {};
+    if (empty) { this.p('studentList', null); this.p('lastStudent', null); }
+    else {
+      for (var i = 0; i < DATA.length; i++) {
+        this.nodes['n' + i] = { id: 'n' + i, name: DATA[i][0], megama: DATA[i][1], grade: DATA[i][2], next: i < LAST ? 'n' + (i + 1) : null };
+        this.row1.push('n' + i);
+      }
+      this.p('studentList', 'n0'); this.p('lastStudent', 'n' + LAST);
+    }
+    this.chg = {};
+  }
+  function setIn(list, name, val, chg) {
+    for (var i = 0; i < list.length; i++) if (list[i][0] === name) {
+      if (val === undefined) list.splice(i, 1); else list[i][1] = val;
+      chg[name] = 1; return;
+    }
+    if (val !== undefined) { list.push([name, val]); chg[name] = 1; }
+  }
+  Sim.prototype.p = function (name, t) { setIn(this.ptrs, name, t, this.chg); };
+  Sim.prototype.v = function (name, val) { setIn(this.vars, name, val, this.chg); };
+  Sim.prototype.step = function (key) {
+    if (!(key in this.keys)) throw new Error('missing line key ' + key);
+    var nodes = {};
+    for (var id in this.nodes) nodes[id] = Object.assign({}, this.nodes[id]);
+    this.frames.push({ line: this.keys[key], nodes: nodes, row1: this.row1.slice(), row2: this.row2.slice(),
+      ptrs: this.ptrs.map(function (x) { return x.slice(); }), vars: this.vars.map(function (x) { return x.slice(); }),
+      check: this.check, flash: this.flash, ret: this.ret, chg: this.chg });
+    this.check = null; this.flash = null; this.chg = {};
+  };
+  function nxt(c) { return c < LAST ? 'n' + (c + 1) : null; }
+  function idxOf(name) { for (var i = 0; i < DATA.length; i++) if (DATA[i][0] === name) return i; return -1; }
+
+  var RUN = {};
+  RUN.take = function (S) {
+    S.v('name', '"Maya"'); S.v('hours', '5'); S.step('sig');
+    S.p('current', 'n0'); S.step('init');
+    for (var c = 0; ; c++) {
+      S.step('while');
+      var n = S.nodes['n' + c];
+      S.v('student', n.name); S.step('get');
+      S.check = n.id; S.step('if');
+      if (n.name === 'Maya') break;
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    S.v('total', n.grade + ' + 5 = ' + (n.grade + 5)); S.step('sum');
+    n.grade += 5; S.flash = n.id; S.step('set');
+    S.v('return', 'true'); S.step('rt');
+  };
+  RUN.add = function (S, sc) {
+    var nm = sc === 'exists' ? 'Maya' : 'Omer';
+    S.v('student', nm); S.step('sig');
+    S.p('current', S.row1.length ? 'n0' : null); S.step('init');
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === S.row1.length) break;
+      S.check = 'n' + c; S.step('if');
+      if (S.nodes['n' + c].name === nm) { S.v('return', 'false'); S.step('rf'); return; }
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    var id = 'n' + S.row1.length;
+    S.nodes[id] = { id: id, name: 'Omer', megama: 'Sports', grade: 0, next: null, isNew: true };
+    S.row1.push(id); S.p('newNode', id); S.step('new');
+    S.step('ifnull');
+    if (sc === 'empty') { S.p('studentList', id); S.step('sethead'); }
+    else { S.nodes['n' + LAST].next = id; S.step('link'); }
+    S.p('lastStudent', id); S.step('last');
+    S.v('return', 'true'); S.step('rt');
+  };
+  RUN.remove = function (S, sc) {
+    var nm = { first: 'Noa', middle: 'Maya', last: 'Shira', none: 'Dana' }[sc];
+    S.v('name', '"' + nm + '"'); S.step('sig');
+    S.step('empty');
+    S.check = 'n0'; S.step('first');
+    if (sc === 'first') {
+      S.nodes.n0.gone = true; S.p('studentList', 'n1'); S.step('headnext');
+      S.step('ifonly');
+      S.v('return', 'true'); S.step('rt1'); return;
+    }
+    S.p('prev', 'n0'); S.step('prev');
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === LAST) { S.v('return', 'false'); S.step('rf'); return; }
+      S.check = 'n' + (c + 1); S.step('if');
+      if (S.nodes['n' + (c + 1)].name === nm) break;
+      S.p('prev', 'n' + (c + 1)); S.step('adv');
+    }
+    var t = 'n' + (c + 1);
+    S.check = t; S.step('iflast');
+    if (c + 1 === LAST) { S.p('lastStudent', 'n' + c); S.step('setlast'); }
+    S.nodes['n' + c].next = S.nodes[t].next; S.nodes[t].gone = true; S.step('unlink');
+    S.v('return', 'true'); S.step('rt');
+  };
+  RUN.list1 = function (S) {
+    S.v('megama', '"Computers"'); S.step('sig');
+    S.p('first', null); S.step('first');
+    S.p('last', null); S.step('last');
+    S.p('current', 'n0'); S.step('init');
+    var k = 0, lastId = null;
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === DATA.length) break;
+      var n = S.nodes['n' + c];
+      S.check = n.id; S.step('if');
+      if (n.megama === 'Computers') {
+        var id = 'r' + k;
+        S.nodes[id] = { id: id, name: n.name, megama: n.megama, grade: n.grade, next: null, isNew: true };
+        S.row2.push(id); S.p('newNode', id); S.step('new');
+        S.step('iffirst');
+        if (!lastId) { S.p('first', id); S.step('setfirst'); }
+        else { S.nodes[lastId].next = id; S.step('link'); }
+        S.p('last', id); S.step('setlast');
+        S.p('newNode'); lastId = id; k++;
+      }
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    S.ret = S.row2.slice(); S.v('return', 'first'); S.step('rt');
+  };
+  RUN.list2 = function (S) {
+    S.v('megama', '"Computers"'); S.step('sig');
+    S.nodes.d = { id: 'd', dummy: true, next: null, isNew: true };
+    S.row2.push('d'); S.p('dummy', 'd'); S.step('dummy');
+    S.p('last', 'd'); S.step('last');
+    S.p('current', 'n0'); S.step('init');
+    var k = 0, lastId = 'd';
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === DATA.length) break;
+      var n = S.nodes['n' + c];
+      S.check = n.id; S.step('if');
+      if (n.megama === 'Computers') {
+        var id = 'r' + k;
+        S.nodes[id] = { id: id, name: n.name, megama: n.megama, grade: n.grade, next: null, isNew: true };
+        S.row2.push(id); S.nodes[lastId].next = id; S.step('link');
+        S.p('last', id); S.step('setlast');
+        lastId = id; k++;
+      }
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    S.nodes.d.gone = true; S.ret = S.row2.slice(1); S.v('return', 'dummy.GetNext()'); S.step('rt');
+  };
+  RUN.count = function (S) {
+    S.v('megama', '"Computers"'); S.step('sig');
+    var cnt = 0; S.v('count', '0'); S.step('init');
+    S.p('current', 'n0'); S.step('cur');
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === DATA.length) break;
+      var n = S.nodes['n' + c];
+      S.check = n.id; S.step('if');
+      if (n.megama === 'Computers') { cnt++; S.v('count', '' + cnt); S.step('inc'); }
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    S.v('return', '' + cnt); S.step('rt');
+  };
+  RUN.best = function (S, sc) {
+    var meg = sc === 'no' ? 'Philosophy' : 'Computers';
+    S.v('megama', '"' + meg + '"'); S.step('sig');
+    S.v('best', 'null'); S.step('init');
+    S.p('current', 'n0'); S.step('cur');
+    var best = null;
+    for (var c = 0; ; c++) {
+      S.step('while');
+      if (c === DATA.length) break;
+      var n = S.nodes['n' + c];
+      S.v('student', n.name); S.step('get');
+      S.check = n.id; S.step('if');
+      if (n.megama === meg) {
+        S.check = n.id; S.step('if2');
+        if (!best || n.grade > best.grade) { best = n; S.v('best', n.name + ' (' + n.grade + ' hours)'); S.step('set'); }
+      }
+      S.p('current', nxt(c)); S.step('adv');
+    }
+    S.v('return', best ? best.name : 'null'); S.step('rt');
+  };
+
+  var SCEN = {
+    add: [['new', 'חדש', 'מוסיפים תלמיד חדש, Omer, שעוד לא נמצא ברשימה.'],
+          ['exists', 'קיים', 'מנסים להוסיף את Maya, שכבר נמצאת ברשימה.'],
+          ['empty', 'רשימה ריקה', 'מוסיפים את Omer לכיתה שעדיין אין בה תלמידים.']],
+    remove: [['first', 'ראשון', 'מסירים את Noa, התלמידה הראשונה ברשימה.'],
+             ['middle', 'אמצע', 'מסירים את Maya, מאמצע הרשימה.'],
+             ['last', 'אחרון', 'מסירים את Shira, התלמידה האחרונה ברשימה.'],
+             ['none', 'לא קיים', 'מנסים להסיר את Dana, שלא נמצאת ברשימה.']],
+    best: [['yes', 'מגמה קיימת', 'מוצאים את התלמיד עם הכי הרבה שעות התנדבות במגמת Computers.'],
+           ['no', 'מגמה ריקה', 'מחפשים את התלמיד עם הכי הרבה שעות במגמת Philosophy, שאין בה אף תלמיד.']]
+  };
+  var DEF = { add: 'new', remove: 'middle', best: 'yes' };
+
+  var W = 876, ROW1 = 120, H = 150, ROW2 = 380, PH = 38;
+  document.querySelectorAll('.tr-slide').forEach(function (slide, si) {
+    var name = slide.dataset.trace;
+    var P = parse(M[name]);
+    var codeEl = slide.querySelector('.tr-code'), diag = slide.querySelector('.tr-diag'), leadEl = slide.querySelector('.tr-lead');
+    codeEl.innerHTML = P.lines.map(function (l) { return '<span class="tr-line">' + (esc(l) || ' ') + '</span>'; }).join('');
+    var lineEls = codeEl.children;
+    var scen = SCEN[name] || [[null, '', null]], FR = {};
+    scen.forEach(function (sc) { var S = new Sim(P.keys, sc[0] === 'empty'); RUN[name](S, sc[0]); FR[sc[0]] = S.frames; });
+    var slots = 0, hasRow2 = false;
+    Object.keys(FR).forEach(function (k) { FR[k].forEach(function (f) { slots = Math.max(slots, f.row1.length, f.row2.length); if (f.row2.length) hasRow2 = true; }); });
+    var slotW = Math.min(176, W / slots), nodeW = slotW - 40;
+    var varsTop = hasRow2 ? ROW2 : 420, varsLeft = hasRow2 ? 3 * slotW + 10 : 0, HT = hasRow2 ? ROW2 + H + 170 : varsTop + 150, mk = 'trh' + si;
+    diag.style.height = HT + 'px';
+    diag.innerHTML = '<svg class="tr-links" width="' + W + '" height="' + HT + '"><defs><marker id="' + mk + '" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" style="fill:var(--color-neutral-700)"/></marker></defs><g></g></svg>' +
+      (hasRow2 ? '<div class="tr-rowlabel" style="top:' + (ROW2 - 40) + 'px">הרשימה החדשה</div>' : '') +
+      '<div class="tr-vars" style="top:' + varsTop + 'px;left:' + varsLeft + 'px"></div><div class="tr-count"></div>';
+    var g = diag.querySelector('g'), varsEl = diag.querySelector('.tr-vars'), countEl = diag.querySelector('.tr-count');
+    var nodeEls = {}, ptrEls = {}, curSc = SCEN[name] ? DEF[name] : null, F = FR[curSc];
+
+    var scBox = slide.querySelector('.tr-scen');
+    if (scBox && SCEN[name]) {
+      scBox.innerHTML = '<span class="tr-scen-label">תרחיש:</span>' + scen.map(function (sc) { return '<button type="button" class="tr-sc" data-sc="' + sc[0] + '">' + sc[1] + '</button>'; }).join('');
+      scBox.addEventListener('click', function (e) {
+        var b = e.target.closest('.tr-sc'); if (!b) return;
+        e.stopPropagation(); choose(b.dataset.sc);
+      });
+    }
+    function choose(id) {
+      curSc = id; F = FR[id];
+      slide.dataset.steps = F.length - 1; slide.__stage = 0;
+      if (scBox) scBox.querySelectorAll('.tr-sc').forEach(function (b) { b.classList.toggle('on', b.dataset.sc === id); });
+      scen.forEach(function (sc) { if (sc[0] === id && sc[2]) leadEl.textContent = sc[2]; });
+      render(0);
+    }
+    function nodeEl(id) {
+      if (!nodeEls[id]) {
+        var el = document.createElement('div'); el.className = 'tr-node';
+        el.innerHTML = '<div class="tr-val"><span class="tr-name"></span><span class="tr-meg"></span><span class="tr-grade"></span></div><div class="tr-next"></div>';
+        el.style.width = nodeW + 'px'; diag.appendChild(el); nodeEls[id] = el;
+      }
+      return nodeEls[id];
+    }
+    function ptrEl(nm) {
+      if (!ptrEls[nm]) {
+        var el = document.createElement('div');
+        el.innerHTML = '<span class="tr-pill">' + nm + '</span><span class="tr-stem"></span><span class="tr-head"></span>';
+        diag.appendChild(el); ptrEls[nm] = el;
+      }
+      return ptrEls[nm];
+    }
+    function render(s) {
+      var si2 = Math.max(0, Math.min(F.length - 1, s)), f = F[si2];
+      for (var i = 0; i < lineEls.length; i++) lineEls[i].classList.toggle('on', i === f.line);
+      var le = lineEls[f.line];
+      if (le && codeEl.clientHeight) {
+        var top = le.offsetTop, h = codeEl.clientHeight;
+        if (top < codeEl.scrollTop + 40 || top > codeEl.scrollTop + h - 70) codeEl.scrollTop = top - h / 2;
+      }
+      var pos = {};
+      f.row1.forEach(function (id, i) { pos[id] = { x: i * slotW, y: ROW1, row: 1 }; });
+      f.row2.forEach(function (id, i) { pos[id] = { x: i * slotW, y: ROW2, row: 2 }; });
+      Object.keys(nodeEls).forEach(function (id) { if (!pos[id]) nodeEls[id].style.display = 'none'; });
+      var paths = '';
+      Object.keys(pos).forEach(function (id) {
+        var n = f.nodes[id], p = pos[id], el = nodeEl(id);
+        el.style.display = ''; el.style.left = p.x + 'px'; el.style.top = p.y + 'px';
+        el.querySelector('.tr-name').textContent = n.dummy ? 'null' : n.name;
+        el.querySelector('.tr-meg').textContent = n.dummy ? '' : n.megama;
+        el.querySelector('.tr-grade').textContent = n.dummy ? '' : n.grade + ' שעות';
+        var nx = el.querySelector('.tr-next'); nx.textContent = n.next ? '●' : 'null'; nx.classList.toggle('link', !!n.next);
+        el.classList.toggle('new', !!n.isNew); el.classList.toggle('dummy', !!n.dummy);
+        el.classList.toggle('gone', !!n.gone); el.classList.toggle('check', f.check === id);
+        el.classList.toggle('flash', f.flash === id); el.classList.toggle('ret', !!(f.ret && f.ret.indexOf(id) >= 0));
+        if (n.next && pos[n.next]) {
+          var q = pos[n.next], x1 = p.x + nodeW - 18, y1 = p.y + H - 21, x2 = q.x - 2, y2 = q.y + H - 21;
+          var op = (n.gone || f.nodes[n.next].gone) ? 0.3 : 1, d;
+          if (q.row === p.row && q.x - p.x > slotW * 1.5) d = 'M' + x1 + ' ' + y1 + ' C' + (x1 + 30) + ' ' + (y1 + 95) + ' ' + (x2 - 40) + ' ' + (y2 + 95) + ' ' + x2 + ' ' + y2;
+          else d = 'M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2;
+          paths += '<path d="' + d + '" style="fill:none;stroke:var(--color-neutral-700);stroke-width:3;opacity:' + op + '" marker-end="url(#' + mk + ')"/>';
+        }
+      });
+      g.innerHTML = paths;
+      var stack = {}, chips = [];
+      Object.keys(ptrEls).forEach(function (nm) { ptrEls[nm].style.display = 'none'; });
+      f.ptrs.forEach(function (pp) {
+        var nm = pp[0], t = pp[1];
+        if (t === null) { chips.push('<span class="tr-var' + (f.chg[nm] ? ' chg' : '') + '">' + nm + ' = null</span>'); return; }
+        var p = pos[t]; if (!p) return;
+        var down = p.row === 2 || !!ATTR[nm], key = t + (down ? 'd' : 'u'), k = stack[key] = (stack[key] || 0) + 1, L = 10 + (k - 1) * 46;
+        var el = ptrEl(nm);
+        el.className = 'tr-ptr ' + (ATTR[nm] ? 'attr' : 'local') + (down ? ' down' : '');
+        el.style.display = ''; el.style.left = (p.x + nodeW / 2) + 'px';
+        el.style.top = (down ? p.y + H + 2 : p.y - (PH + L + 12) - 2) + 'px';
+        el.querySelector('.tr-stem').style.height = L + 'px';
+      });
+      f.vars.forEach(function (vv) {
+        if (vv[0] === 'return') chips.push('<span class="tr-var ret">return ' + esc(vv[1]) + '</span>');
+        else chips.push('<span class="tr-var' + (f.chg[vv[0]] ? ' chg' : '') + '">' + vv[0] + ' = ' + esc(vv[1]) + '</span>');
+      });
+      if (si2 === F.length - 1) chips.push('<span class="tr-var end">סוף הפעולה</span>');
+      varsEl.innerHTML = chips.join('');
+      countEl.textContent = 'צעד ' + (si2 + 1) + ' מתוך ' + F.length;
+    }
+    slide.__onStage = render;
+    if (curSc) choose(curSc); else { slide.dataset.steps = F.length - 1; render(0); }
+  });
+})();
+</script>
+<script>
 
 (function () {
   var BASE = 2400, STEP = 16;
@@ -1430,6 +2160,7 @@ ItemInPosition(cars, 2);</pre>
   function inRange(r, s) { var p = r.split('-'), a = +p[0], b = p.length === 1 ? a : (p[1] === '' ? 99 : +p[1]); return s >= a && s <= b; }
   function setStage(slide, s) {
     slide.__stage = s;
+    if (slide.__onStage) slide.__onStage(s);
     function tog(attr, cls) {
       slide.querySelectorAll('[data-' + attr + ']').forEach(function (el) { el.classList.toggle(cls, inRange(el.getAttribute('data-' + attr), s)); });
     }
@@ -1509,12 +2240,30 @@ ItemInPosition(cars, 2);</pre>
     var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
     document.getElementById('stage').style.transform = 'translate(-50%, -50%) scale(' + s + ')';
   }*/
-  var baseDPR = window.devicePixelRatio;
+  var zoom = 1, ox = 0, oy = 0;
+  function fit() { return Math.min(window.innerWidth / 1920, window.innerHeight / 1080); }
   function scale() {
-    var zoom = window.devicePixelRatio / baseDPR;
-    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080) * zoom;
-    document.getElementById('stage').style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+    var S = fit() * zoom;
+    document.getElementById('stage').style.transform =
+      'translate(calc(-50% + ' + ox + 'px), calc(-50% + ' + oy + 'px)) scale(' + S + ')';
   }
+  window.addEventListener('wheel', function (e) {
+    if (!e.ctrlKey) return;
+    e.preventDefault();
+    var S = fit() * zoom;
+    var nz = Math.min(4, Math.max(1, zoom * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
+    var S2 = fit() * nz;
+    var cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+    var px = (e.clientX - cx - ox) / S, py = (e.clientY - cy - oy) / S;
+    ox = e.clientX - cx - px * S2;
+    oy = e.clientY - cy - py * S2;
+    zoom = nz;
+    if (zoom === 1) { ox = 0; oy = 0; }
+    scale();
+  }, { passive: false });
+  window.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key === '0') { e.preventDefault(); zoom = 1; ox = 0; oy = 0; scale(); }
+  });
   window.addEventListener('resize', scale);
   scale();
   requestAnimationFrame(scale);
